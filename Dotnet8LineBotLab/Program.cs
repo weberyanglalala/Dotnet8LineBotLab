@@ -1,3 +1,5 @@
+using Dotnet8LineBotLab.Services;
+
 namespace Dotnet8LineBotLab;
 
 public class Program
@@ -8,6 +10,8 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddControllersWithViews();
+        builder.Services.AddScoped<DifyService>();
+        builder.Services.AddScoped<CacheService>();
 
         var app = builder.Build();
 
